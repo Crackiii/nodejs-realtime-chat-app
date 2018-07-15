@@ -1,0 +1,21 @@
+{
+  "name": "chat_app",
+  "version": "1.0.0",
+  "description": "Node Js Personal Chat ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Nadeem Ahmad",
+  "license": "ISC",
+  "dependencies": {
+    "buffer": "^5.0.8",
+    "express": "^4.16.2",
+    "express-fileupload": "^0.3.0",
+    "formidable": "^1.1.1",
+    "mv": "^2.1.1",
+    "mysql": "^2.15.0",
+    "socket.io": "^2.0.3"
+  }
+}

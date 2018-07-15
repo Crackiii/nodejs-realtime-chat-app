@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat | Room</title>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="Plugins/Materialize/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="jquery.min.js" ></script>
+	<script type="text/javascript" src="Plugins/Materialize/js/materialize.min.js" ></script>
+  <link rel="stylesheet" type="text/css" href="Plugins/Font Awesome/css/font-awesome.min.css">
+
+</head>
+
+<body class="login_body">
+
+
+
+  <!--
+    ==========================================================================================
+    =============================== LOGIN AND SIGN UP START ==================================
+    ==========================================================================================
+  -->
+
+  <div class="container auth_container" >
+    <div class="row" >
+       <div id="particles-js"></div>
+
+      <div class="col s12 m6 l6 xl6 offset-m4 offset-l3 offset-xl3 z-depth-5 form_wrap" id="signup_form">
+        <header>SIGNUP</header>
+        <form method="POST" class="signup_form">
+            <div class="errorMessage"> <i class="material-icons">warning</i> <span></span></div>
+            <div class="input-field">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_prefix" type="text" class="validate"  autocomplete="off" name="sn_un">
+              <label for="icon_prefix">Full Name</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">email</i>
+              <input id="icon_prefix" type="email" class="validate"  autocomplete="off" name="sn_em">
+              <label for="icon_prefix">Your Email</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">lock</i>
+              <input id="icon_prefix" type="password" class="validate"  autocomplete="off" name="sn_ps">
+              <label for="icon_prefix">Password</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">lock</i>
+              <input id="icon_prefix" type="password" class="validate"  autocomplete="off" name="sn_psr">
+              <label for="icon_prefix">Password Repeat</label>
+            </div>
+            <button type='submit' class='waves-effect waves-light btn btn-small teal lighten-1 subBtn'> SIGN UP </button>
+            <div class="acc_assurance">
+              Already have an account ? <a href="#" class="show_login">Login</a>
+            </div>
+        </form>
+      </div>
+
+      <div class="col s12 m6 l6 xl6 offset-m4 offset-l3 offset-xl3 z-depth-5 form_wrap" id="login_form">
+        <header>LOGIN</header>
+        <form method="POST" class="login_form">
+            <div class="errorMessage2"> <i class="material-icons">warning</i> <span></span></div>
+            <div class="input-field">
+              <i class="material-icons prefix">email</i>
+              <input id="icon_prefix" type="text" class="validate"  autocomplete="off" name="lg_em">
+              <label for="icon_prefix">Your Email</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">lock</i>
+              <input id="icon_prefix" type="password" class="validate"  autocomplete="off" name="lg_ps">
+              <label for="icon_prefix">Password</label>
+            </div>
+            <button type='submit' class='waves-effect waves-light btn btn-small teal lighten-1 subBtn'> LOGIN </button>
+            <div class="acc_assurance">Don't have an account ? <a href="#" class="show_signup">Sign Up</a> </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container user_welcome_mess">
+    <div class="row">
+      <div class="col s12 m6 l6 xl6 offset-m4 offset-l3 offset-xl3 z-depth-5 user_welcome">
+        <i class="material-icons">check_circle</i>
+        <h4>Welcome, You are successfully registered ! </h4>
+      </div>
+    </div>
+  </div>
+  
+
+  <!--
+    ==========================================================================================
+    =============================== LOGIN AND SIGN UP START ==================================
+    ==========================================================================================
+  -->
+
+  <!--
+    ==========================================================================================
+    =================================== CHAT ROOM START ======================================
+    ==========================================================================================
+  -->
+  <div class="chat-wrap z-depth-5" style="display: none;">
+    <div class="row">
+
+      <!--Left table Start-->
+      <div class="col s9 m4 l3 xl3 left-column">
+        <div class="col s12 m12 x12 left-col-head" >
+          <div id="particles-js2"></div>
+            <a class='dropdown-button btn-floating btn-flat profileBtn' href='#' data-activates='profile'><i class="material-icons">more_vert</i></a>
+            <div class="z-depth-5 user-profile-img">
+                <img src="me.jpg">
+            </div>
+            <div class="user-profile-name ">
+                <span>Nadeem Ahmad</span>
+            </div>
+        </div>
+        <div class="col s12 m12 x12 users-search">
+              <input type="" name="" placeholder="Search Users...">
+        </div>
+        <div class="col s12 m12 x12 users-list">
+              
+        </div>
+      </div>
+      <!--Left table End-->
+
+      <!--Profile table Start-->
+      <div class="col s9 m4 l3 xl3 profile_edit_tab">
+        <div class="col s12 m12 x12 profile_edit_head">
+          <div class="back_to_list"><i class="material-icons">arrow_back</i> <span>Profile</span></div>
+        </div>
+        <div class="user-image">
+          <form class="up_img_form">
+            <input type="file" name="img_det" id="upl_img" >
+            <label for="upl_img"><i class="material-icons">camera</i> Upload Image</label>
+          </form>
+          <img src="me.jpg">
+        </div>
+      </div>
+      <!--Profile table End-->
+
+      <!--Right table Start-->
+      <div class="col s12 m8 l9 xl9 right-column" >
+
+        <div class="col s12 m12 l12 xl12 right-tab-wrap">
+            <div class="promo">
+              <img src="chat.png">
+              <div class="promo-text">Chat</div>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l12 xl12 right-tab-indtexts" >
+           <div class="right-tab-head">
+              <a href="#" class="left-tab-toggle left">
+                <i class="material-icons ">blur_on</i>
+              </a>
+              <img src="me.jpg" class="left">
+              <div class="user-to-name left"></div>
+           </div>
+           <div class="right-tab-textsbox">
+
+           </div>
+           <div class="right-tab-textarea">
+               <textarea placeholder="Type Your Message..." class="type_message"></textarea>
+           </div>
+        </div>
+
+      </div>
+      <!--Right table End-->
+
+      
+    </div>
+  </div>
+
+  <!--Drop Downns Start-->
+  <ul id='profile' class='dropdown-content'>
+    <li class="open_profile"><a href="#"><i class="material-icons">supervisor_account</i> Profile</a></li>
+    <li class="logout"><a href="#"><i class="material-icons">streetview</i> Logout</a></li>
+  </ul>
+  <!--Drop Downns End-->
+  <!--
+    ==========================================================================================
+    =================================== CHAT ROOM END ========================================
+    ==========================================================================================
+  -->
+
+
+</body>
+
+<script type="text/javascript" src="http://127.0.0.1:8000/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript" src="custom.js"></script>
+
+
+</html>
